@@ -1,4 +1,5 @@
 source "https://rubygems.org"
 
 gem "plist"
-gem "alfred-workflow"
+gem "alfred-workflow", "2.0.5"
+gem "qiita", "1.2.0"
