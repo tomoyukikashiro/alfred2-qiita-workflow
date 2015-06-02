@@ -1,5 +1,7 @@
 # alfred2-qiita-workflow
 
+![screen](http://kashiro.github.io/alfred2-qiita-workflow/screenshots/image.png)
+
 ## SETUP
 
 add access token
@@ -30,7 +32,7 @@ qtt ${query}
 
 ## QUERY OPTION
 
-
+![screen](http://kashiro.github.io/alfred2-qiita-workflow/screenshots/query.png)
 
 ## LICENSE:
 
