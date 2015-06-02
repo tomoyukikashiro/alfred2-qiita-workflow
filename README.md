@@ -2,6 +2,8 @@
 
 ![screen](http://kashiro.github.io/alfred2-qiita-workflow/screenshots/image.png)
 
+[DOWNLOAD](https://github.com/kashiro/alfred2-qiita-workflow/releases/download/v1.0.2/qiita-commands.alfredworkflow)
+
 ## SETUP
 
 add access token
