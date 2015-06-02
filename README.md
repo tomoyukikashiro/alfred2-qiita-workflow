@@ -22,7 +22,7 @@ this program. If not, see <http://www.gnu.org/licenses/>.
 
 ## Reference
 
-Supported by these libray
+Supported by these libraies
 
 > Copyright (c) 2013 Zhao Cai caizhaoff@gmail.com
 
