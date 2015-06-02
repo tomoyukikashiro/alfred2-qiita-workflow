@@ -1,5 +1,36 @@
 # alfred2-qiita-workflow
 
+## SETUP
+
+add access token
+
+```
+qt > token ${access_token}
+```
+
+add qiita team subdomain
+
+```
+qt > team ${subdomain}
+```
+
+## COMMANDS
+
+search qiita article
+
+```
+qt ${query}
+```
+
+search qiita team article
+
+```
+qtt ${query}
+```
+
+## QUERY OPTION
+
+
 
 ## LICENSE:
 
