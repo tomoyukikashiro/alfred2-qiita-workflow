@@ -22,5 +22,9 @@ this program. If not, see <http://www.gnu.org/licenses/>.
 
 ## Reference
 
+Supported by these libray
+
+> Copyright (c) 2013 Zhao Cai caizhaoff@gmail.com
+
 * [alfred2-ruby-framework]( https://github.com/canadaduane/alfred2-ruby-framework )
 * [alfred2-ruby-template](https://github.com/zhaocai/alfred2-ruby-template)
