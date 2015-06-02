@@ -17,7 +17,5 @@ Alfred.with_friendly_error do |alfred|
   elsif query == "team"
     Util.team(setting, ARGV[1])
   end
-
-  puts feedback.to_alfred()
 end
 

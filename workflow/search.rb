@@ -15,9 +15,10 @@ class Search
     response.body.each_with_index do | item, index |
       response.body[index]["updated_at"] = Time.parse(item["updated_at"])
     end
+
     response.body.sort_by! do |item| item["updated_at"]  end
 
-    response.body.each do | res |
+    response.body.each_with_index do | res, index |
       tags = (res["tags"].map do | tag | tag["name"] end).join(',')
       subtitle =  "@#{res["user"]["id"]} / " + res["updated_at"].strftime("%Y/%m/%d %H:%M:%S") + " updated / tags: #{tags}"
       feedback.add_item({
@@ -25,7 +26,8 @@ class Search
         :title    => res["title"] ,
         :subtitle => subtitle     ,
         :arg      => res["url"]   ,
-        :valid    => "yes"
+        :valid    => "yes",
+        :order    => response.body.size - index
       })
     end
   end

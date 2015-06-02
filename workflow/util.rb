@@ -4,13 +4,15 @@ class Util
   def self.token(setting, token)
     unless token.nil?
       setting.set("token", token)
-      Alfred::Util.notify(nil, "Saved Token", {title: "Alfred Qiita"})
+      #Alfred::Util.notify(nil, "Saved Token", {title: "Alfred Qiita"})
+      puts "Save Token"
     end
   end
   def self.team(setting, domain)
     if !domain.blank?
       setting.set("team_host", "#{domain}.qiita.com")
-      Alfred::Util.notify(nil, "Saved Team / #{domain}", {title: "Alfred Qiita"})
+      #Alfred::Util.notify(nil, "Saved Team / #{domain}", {title: "Alfred Qiita"})
+      puts "Save Team / #{domain}"
     end
   end
 
