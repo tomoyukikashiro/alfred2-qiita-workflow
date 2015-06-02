@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>me.tomoyukikashiro.qiita</string>
+	<string>tomoyukikashiro.me.qiita</string>
 	<key>category</key>
 	<string>Tools</string>
 	<key>connections</key>
@@ -12,7 +12,40 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>AA65C003-2317-4048-B12A-BF0BE7E321BB</string>
+				<string>1FA71B3C-8C3E-490D-BA20-28423093993C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>7EF680B4-512F-4A17-8DB1-99033A6E9CDC</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>1FA71B3C-8C3E-490D-BA20-28423093993C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>7FCCDFDC-3DB1-411A-9DFE-673DD82FB93D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>28E1F114-411E-4334-8F22-9407D437A4CB</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>AD25DEAE-411B-4AFC-9E32-685B009A1D76</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>D3B46610-C60F-4D3C-A487-3C4D4ADAE111</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -43,7 +76,7 @@
 			<key>type</key>
 			<string>alfred.workflow.action.openurl</string>
 			<key>uid</key>
-			<string>AA65C003-2317-4048-B12A-BF0BE7E321BB</string>
+			<string>1FA71B3C-8C3E-490D-BA20-28423093993C</string>
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
@@ -57,7 +90,7 @@
 				<key>keyword</key>
 				<string>qt</string>
 				<key>queuedelaycustom</key>
-				<integer>3</integer>
+				<integer>10</integer>
 				<key>queuedelayimmediatelyinitially</key>
 				<false/>
 				<key>queuedelaymode</key>
@@ -67,11 +100,11 @@
 				<key>runningsubtext</key>
 				<string>Loading...</string>
 				<key>script</key>
-				<string>/usr/bin/ruby ./main.rb &quot;{query}&quot;</string>
+				<string>/usr/bin/ruby ./main.rb qiita "{query}"</string>
 				<key>subtext</key>
-				<string>search &quot;{query}&quot;</string>
+				<string>search "{query}"</string>
 				<key>title</key>
-				<string>Qiita Search Articles</string>
+				<string>search articles in qiita</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -84,6 +117,123 @@
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>qtt</string>
+				<key>queuedelaycustom</key>
+				<integer>10</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>2</integer>
+				<key>queuemode</key>
+				<integer>2</integer>
+				<key>runningsubtext</key>
+				<string>Loading...</string>
+				<key>script</key>
+				<string>/usr/bin/ruby ./main.rb team "{query}"</string>
+				<key>subtext</key>
+				<string>search "{query}"</string>
+				<key>title</key>
+				<string>search articles in qiita team</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>7EF680B4-512F-4A17-8DB1-99033A6E9CDC</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>ruby setup.rb token "{query}"</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>28E1F114-411E-4334-8F22-9407D437A4CB</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>qt &gt; token</string>
+				<key>subtext</key>
+				<string>qt &gt; token &lt;access_token&gt;</string>
+				<key>text</key>
+				<string>set access token</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>7FCCDFDC-3DB1-411A-9DFE-673DD82FB93D</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>ruby setup.rb team "{query}"</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>D3B46610-C60F-4D3C-A487-3C4D4ADAE111</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>qt &gt; team</string>
+				<key>subtext</key>
+				<string>qt &gt; token &lt;team_domain&gt;</string>
+				<key>text</key>
+				<string>set qiita team setting</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>AD25DEAE-411B-4AFC-9E32-685B009A1D76</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
@@ -92,12 +242,37 @@
 		<key>1A73DCE8-42D3-4F7E-9099-A1E10C55B22A</key>
 		<dict>
 			<key>ypos</key>
-			<real>170.0</real>
+			<real>110</real>
 		</dict>
-		<key>AA65C003-2317-4048-B12A-BF0BE7E321BB</key>
+		<key>1FA71B3C-8C3E-490D-BA20-28423093993C</key>
 		<dict>
 			<key>ypos</key>
-			<real>10.0</real>
+			<real>110</real>
+		</dict>
+		<key>28E1F114-411E-4334-8F22-9407D437A4CB</key>
+		<dict>
+			<key>ypos</key>
+			<real>350</real>
+		</dict>
+		<key>7EF680B4-512F-4A17-8DB1-99033A6E9CDC</key>
+		<dict>
+			<key>ypos</key>
+			<real>230</real>
+		</dict>
+		<key>7FCCDFDC-3DB1-411A-9DFE-673DD82FB93D</key>
+		<dict>
+			<key>ypos</key>
+			<real>350</real>
+		</dict>
+		<key>AD25DEAE-411B-4AFC-9E32-685B009A1D76</key>
+		<dict>
+			<key>ypos</key>
+			<real>470</real>
+		</dict>
+		<key>D3B46610-C60F-4D3C-A487-3C4D4ADAE111</key>
+		<dict>
+			<key>ypos</key>
+			<real>470</real>
 		</dict>
 	</dict>
 	<key>webaddress</key>

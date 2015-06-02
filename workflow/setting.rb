@@ -1,19 +1,16 @@
-require "uri"
-
+#!/usr/bin/env ruby
+# coding: utf-8
 class Setting
   def initialize(alfred)
     @setting ||= Alfred::Setting.new(alfred)
-    @setting[:base_url] = "https://qiita.com/api/v2/oauth/authorize?"
-    @setting[:client_id] = "3055bc3e0af06a6254d17655b860f8678b6e54f9"
-    @setting[:client_secret] = "70789087b130568b372f84d60a67ba10cf5c8f86"
-    @setting[:api_scope] = "read_qiita read_qiita_team"
     @setting.dump
   end
 
-  def auth_url
-    url = self.get("base_url")
-    query = { "client_id"=> self.get("client_id"), "scope"=> self.get("api_scope")}
-    url + URI.encode_www_form(query)
+  def api_option(type)
+    {
+      access_token: self.get("token"),
+      host: type == "team" ? self.get("team_host") : nil
+    }
   end
 
   def get(key)
