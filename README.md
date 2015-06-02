@@ -14,6 +14,10 @@ add access token
 qt > token ${access_token}
 ```
 
+You can generate from here
+
+[qiita > user profile > application](https://qiita.com/settings/applications)
+
 add qiita team subdomain
 
 ```
