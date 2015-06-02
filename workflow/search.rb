@@ -6,10 +6,12 @@ require "time"
 require "qiita"
 
 class Search
-  def self.get(feedback, option, query)
+  def self.get(feedback, option, query, type)
     client = Qiita::Client.new(option)
-    response = client.get("/api/v2/items", per_page: 20, query: query)
+    icon = {type: "default"}
+    icon[:name] = type == "team" ? "team-icon.png" : "icon.png"
 
+    response = client.get("/api/v2/items", per_page: 20, query: query)
     return if response.body.nil?
 
     response.body.each_with_index do | item, index |
@@ -27,7 +29,8 @@ class Search
         :subtitle => subtitle     ,
         :arg      => res["url"]   ,
         :valid    => "yes",
-        :order    => response.body.size - index
+        :order    => response.body.size - index,
+        :icon     => icon
       })
     end
   end

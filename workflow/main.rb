@@ -21,7 +21,7 @@ Alfred.with_friendly_error do |alfred|
     Util.check_token(option[:access_token])
     Util.check_team(option[:host]) if type == "team"
 
-    Search.get(feedback, option, query)
+    Search.get(feedback, option, query, type)
     puts feedback.to_alfred()
   end
 end
