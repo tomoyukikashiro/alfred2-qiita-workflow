@@ -15,7 +15,13 @@ Alfred.with_friendly_error do |alfred|
   if query == "token"
     Util.token(setting, ARGV[1])
   elsif query == "team"
-    Util.team(setting, ARGV[1])
+    if ARGV[1] == "open"
+      Util.open(feedback, "http://#{setting.get("team_host")}/", "team")
+    else
+      Util.team(setting, ARGV[1])
+    end
+  elsif ARGV[0] == "qiita" && ARGV[1] == "open"
+      Util.open(feedback, "http://qiita.com")
   end
 end
 

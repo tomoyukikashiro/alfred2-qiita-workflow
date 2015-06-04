@@ -15,7 +15,19 @@ class Util
       puts "Save Team / #{domain}"
     end
   end
+  def self.open(feedback, url, type=nil)
+    icon = {type: "default"}
+    icon[:name] = type == "team" ? "team-icon.png" : "icon.png"
 
+      feedback.add_item({
+        :uid      => nil          ,
+        :title    => "open #{url}",
+        :arg      => url          ,
+        :valid    => "yes"        ,
+        :icon     => icon
+      })
+      puts feedback.to_alfred()
+  end
   def self.check_team(host)
     if host.blank?
       raise Alfred::InvalidArgument, "need to set team setting"
