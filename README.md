@@ -1,3 +1,17 @@
+# Deprecation
+
+New one is here.
+https://github.com/tomoyukikashiro/qiita-alfred-workflow
+
+
+
+
+
+
+
+
+
+
 # alfred2-qiita-workflow
 
 ![screen](http://kashiro.github.io/alfred2-qiita-workflow/screenshots/image.png)
